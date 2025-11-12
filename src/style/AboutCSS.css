@@ -1,0 +1,184 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.about-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  color: #1f2937;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen';
+}
+
+/* About Hero */
+.about-hero {
+  padding: 5rem 5%;
+  background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%);
+}
+
+.about-hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 3rem;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  color: #6b7280;
+  margin-bottom: 1.2rem;
+  line-height: 1.8;
+}
+
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.about-image img {
+  max-width: 400px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
+}
+
+/* Mission Section */
+.mission-section {
+  padding: 4rem 5%;
+  text-align: center;
+  background: #ffffff;
+}
+
+.mission-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.mission-section p {
+  font-size: 1.1rem;
+  color: #6b7280;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  line-height: 1.8;
+}
+
+.mission-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.mission-card {
+  background: linear-gradient(135deg, #eff6ff, #ffffff);
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.mission-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(37, 99, 235, 0.15);
+}
+
+.mission-card h3 {
+  color: #2563eb;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.mission-card p {
+  color: #4b5563;
+  font-size: 1rem;
+}
+
+/* Footer */
+.footer {
+  background: #1f2937;
+  color: white;
+  padding: 3rem 5% 1rem;
+  margin-top: auto;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto 2rem;
+}
+
+.footer-section h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #60a5fa;
+}
+
+.footer-section p {
+  color: #9ca3af;
+  line-height: 1.6;
+}
+
+.footer-section a {
+  display: block;
+  color: #d1d5db;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s;
+}
+
+.footer-section a:hover {
+  color: #60a5fa;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid #374151;
+  color: #9ca3af;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .about-image img {
+    max-width: 300px;
+  }
+
+  .mission-section h2 {
+    font-size: 2rem;
+  }
+}
