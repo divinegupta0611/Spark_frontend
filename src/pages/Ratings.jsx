@@ -18,12 +18,12 @@ export default function Ratings() {
       setError(null);
 
       // Fetch top liked companies
-      const likedRes = await fetch("http://localhost:5000/top-liked");
+      const likedRes = await fetch("https://spark-backend-20nx.onrender.com/top-liked");
       if (!likedRes.ok) throw new Error("Failed to fetch top liked");
       const likedData = await likedRes.json();
 
       // Fetch top disliked companies
-      const dislikedRes = await fetch("http://localhost:5000/top-disliked");
+      const dislikedRes = await fetch("https://spark-backend-20nx.onrender.com/top-disliked");
       if (!dislikedRes.ok) throw new Error("Failed to fetch top disliked");
       const dislikedData = await dislikedRes.json();
 

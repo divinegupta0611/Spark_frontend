@@ -14,7 +14,7 @@ export default function Explore() {
   const fetchNews = async (symbol) => {
     try {
       setNewsLoading(true);
-      const res = await fetch(`http://localhost:5000/company-news/${symbol}`);
+      const res = await fetch(`https://spark-backend-20nx.onrender.com/company-news/${symbol}`);
       
       if (!res.ok) {
         throw new Error("Failed to fetch news");
@@ -38,7 +38,7 @@ export default function Explore() {
       setError(null);
       setLiked(null);
       
-      const res = await fetch("http://localhost:5000/random-nse");
+      const res = await fetch("https://spark-backend-20nx.onrender.com/random-nse");
       
       if (!res.ok) {
         throw new Error("Failed to fetch data");
@@ -71,7 +71,7 @@ export default function Explore() {
     setLiked(true);
 
     try {
-      const res = await fetch("http://localhost:5000/like-company", {
+      const res = await fetch("https://spark-backend-20nx.onrender.com/like-company", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -105,7 +105,7 @@ export default function Explore() {
     setLiked(false);
 
     try {
-      const res = await fetch("http://localhost:5000/dislike-company", {
+      const res = await fetch("https://spark-backend-20nx.onrender.com/dislike-company", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -146,7 +146,7 @@ export default function Explore() {
       setError(null);
       setLiked(null);
       
-      const res = await fetch(`http://localhost:5000/search-nse?symbol=${encodeURIComponent(trimmedQuery)}`);
+      const res = await fetch(`https://spark-backend-20nx.onrender.com/search-nse?symbol=${encodeURIComponent(trimmedQuery)}`);
       
       if (!res.ok) {
         const errorData = await res.json();
